@@ -29,7 +29,7 @@ const checkInventory = (order) => {
             } else {
                 eject(`The order could not be completed because some items are sold out.`);
             }
-        }, 3000); //generateRandomDelay()
+        }, generateRandomDelay()); 
     });
 };
 
@@ -74,7 +74,7 @@ const processPayment = (responseArray) => {
   
   // This function generates a random number to serve as delay in a setTimeout() since real asynchrnous operations take variable amounts of time
   function generateRandomDelay() {
-    return Math.floor(Math.random() * 2000);
+    return Math.floor(Math.random() * 3000);
   }
   
   module.exports = {checkInventory, processPayment, shipOrder};
